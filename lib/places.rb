@@ -20,4 +20,6 @@ class Places
   define_singleton_method(:clear) do
     @@all_places = []
   end
+
+
 end
