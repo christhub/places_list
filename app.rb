@@ -14,3 +14,8 @@ post('/add') do
   @all_places = Places.all
   erb(:list)
 end
+
+post('/clear') do
+  Places.clear
+  erb(:list)
+end

@@ -1,8 +1,11 @@
 <p>Add a place to the list:</p>
-<form action = "/add" method = "post">
-  <label for = "description">Place</label>
-  <input id = "description" name = "description" type = "text" placeholder="Portland">
-
-  <button type = "submit"> Add Place </button>
+<form class="ah-form" action = "/add" method = "post">
+  <div class="form-group">
+    <label for = "description"></label>
+  </div>
+  <div class="form-group">
+    <input id = "description" name = "description" type = "text" placeholder="Portland" required = "true">
+  </div>
+    <button class="btn-primary btn-md"  type = "submit"> Add Place </button>
 
 </form>
