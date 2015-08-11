@@ -9,4 +9,13 @@ describe('/', {:type => :feature}) {
     expect(page).to have_content("Places!")
   }
 
+  it('accepts a place as portland') {
+    visit('/')
+    fill_in('description', :with => 'disneyland')
+    click_button('submit')
+    expect(page).to have_content('disneyland')
+  }
+
+  
+
 }
