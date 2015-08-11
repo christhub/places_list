@@ -9,4 +9,10 @@ describe(Places) {
       expect(new_place.description).to(eq("Portland"))
     }
   }
+
+  describe(".all") {
+    it("is empty at first") {
+      expect(Places.all).to(eq([]))
+    }
+  }
 }
