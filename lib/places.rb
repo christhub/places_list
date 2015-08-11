@@ -1,5 +1,5 @@
 class Places
-  @@places = []
+  @@all_places = []
 
   define_method(:initialize) do |place|
     @place = place
@@ -10,8 +10,14 @@ class Places
   end
 
   define_singleton_method(:all) do
-    @@places
+    @@all_places
   end
 
-  # define_method(:save)
+  define_method(:save) do
+    @@all_places << self
+  end
+
+  define_singleton_method(:clear) do
+    @@all_places = []
+  end
 end

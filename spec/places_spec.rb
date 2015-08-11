@@ -15,4 +15,17 @@ describe(Places) {
       expect(Places.all).to(eq([]))
     }
   }
+  describe(".save") {
+    it("saves places") {
+      new_place = Places.new("Beijing").save()
+      expect(Places.all()).to(eq(new_place))
+    }
+  }
+  describe(".clear") {
+    it("empties all saved places") {
+      Places.new("Beijing").save()
+      Places.clear()
+      expect(Places.all()).to(eq([]))
+    }
+  }
 }
